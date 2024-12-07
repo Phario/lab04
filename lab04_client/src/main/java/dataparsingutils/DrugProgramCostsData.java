@@ -1,11 +1,6 @@
 package dataparsingutils;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 public class DrugProgramCostsData {
     public DrugProgramCostsData(int year, int month, int numberOfPatients, double refund) {
         this.year = year;
@@ -24,4 +19,14 @@ public class DrugProgramCostsData {
 
     @JsonProperty("refund")
     private double refund;
+
+    public int getMonth() {
+        return month;
+    }
+    public int getNumberOfPatients() {
+        return numberOfPatients;
+    }
+    public double getRefund() {
+        return refund;
+    }
 }

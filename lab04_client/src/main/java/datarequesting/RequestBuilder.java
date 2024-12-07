@@ -5,8 +5,11 @@ import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.Objects;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class RequestBuilder {
+    private static final Logger logger = LoggerFactory.getLogger(RequestBuilder.class);
     private RequestBuilder() {}
     private static final String BASE_URL = "https://api.nfz.gov.pl/app-stat-api-pl/monthly-drug-costs";
     public static URL buildRefundInfoURL(String province, String year, String drugProgramName, String drugName, String gender){
@@ -32,7 +35,7 @@ public class RequestBuilder {
             }
             return uriBuilder.build().toURL();
         } catch (MalformedURLException | URISyntaxException e) {
-            e.printStackTrace();
+            logger.error(e.getMessage());
         }
         return null;
     }
