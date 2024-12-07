@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import static datarequesting.HTTPRequester.parseJSONResponse;
 import static datarequesting.RequestBuilder.buildRefundInfoURL;
 // java --module-path "C:\javafx-sdk-21.0.5\lib" --add-modules javafx.controls,javafx.fxml -jar C:\Users\Phario\IdeaProjects\lab04\lab04_gui\target\app-1.0-SNAPSHOT.jar
+
+//java --module-path "C:\javafx-sdk-21.0.5\lib" --add-modules javafx.controls,javafx.fxml -jar C:\Users\Phario\IdeaProjects\lab04\lab04_gui\target\lab04_gui.jar
 public class GUIApp extends Application {
     private static int graphNumber = 1;
     public void start(Stage stage) {
